@@ -39,7 +39,7 @@ Three different classification models were trained and evaluated to find the bes
 A content-based recommendation engine was built using **Cosine Similarity**. By calculating the similarity between the average TF-IDF vectors of each job category, the system can identify and recommend the top 5 most similar job roles to a candidate's predicted category.
 
 #### e) Web Application and Deployment
-The entire system was encapsulated in a web application built with **Flask**. The user interface, created with HTML and styled with CSS, allows users to paste a resume, select a model, and receive an instant prediction and a list of job recommendations. The final application was deployed on **Hugging Face Spaces** for public access.
+The entire system was encapsulated in a web application built with **Flask**. The user interface, created with HTML allows users to paste a resume, select a model, and receive an instant prediction and a list of job recommendations. The final application was deployed on **Hugging Face Spaces** for public access.
 
 ---
 
