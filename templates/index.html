@@ -1,0 +1,98 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Classifier & Job Recommender</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Classifier & Job Recommender</h1>
+        <form action="/predict" method="post">
+            <textarea name="resume" placeholder="Paste your resume text here..." required>{{ resume_text }}</textarea>
+            <select name="model" required>
+                <option value="knc" {% if selected_model == 'knc' %}selected{% endif %}>K-Nearest Neighbors</option>
+                <option value="mnb" {% if selected_model == 'mnb' %}selected{% endif %}>Multinomial Naive Bayes</option>
+                <option value="rnn" {% if selected_model == 'rnn' %}selected{% endif %}>Recurrent Neural Network (RNN)</option>
+            </select>
+            <button type="submit">Predict & Recommend</button>
+        </form>
+
+        {% if predicted_category %}
+        <div class="results-block">
+            <h2>{{ predicted_category }}</h2>
+        </div>
+        {% endif %}
+
+        {% if recommendations %}
+        <div class="results-block">
+            <h3>Top Recommended Job Categories:</h3>
+            <ul>
+                {% for rec in recommendations %}
+                <li>{{ rec }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Classifier & Job Recommender</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; color: #333; margin: 0; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #1a73e8; }
+        textarea { width: 100%; height: 200px; padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px; margin-bottom: 15px; box-sizing: border-box;}
+        select, button { width: 100%; padding: 12px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px; cursor: pointer; }
+        select { margin-bottom: 15px; }
+        button { background-color: #1a73e8; color: white; border-color: #1a73e8; font-weight: bold; transition: background-color 0.3s; }
+        button:hover { background-color: #1558b3; }
+        .results-block { margin-top: 20px; padding: 20px; background: #e8f0fe; border-left: 5px solid #1a73e8; border-radius: 5px; }
+        h2 { color: #1a73e8; margin-top: 0; }
+        h3 { color: #333; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        ul { list-style-type: none; padding: 0; }
+        li { background: #fff; margin-bottom: 8px; padding: 10px; border-radius: 5px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Classifier & Job Recommender</h1>
+        <form action="/predict" method="post">
+            <textarea name="resume" placeholder="Paste your resume text here..." required>{{ resume_text }}</textarea>
+            <select name="model" required>
+                <option value="knc" {% if selected_model == 'knc' %}selected{% endif %}>K-Nearest Neighbors</option>
+                <option value="mnb" {% if selected_model == 'mnb' %}selected{% endif %}>Multinomial Naive Bayes</option>
+                <option value="rnn" {% if selected_model == 'rnn' %}selected{% endif %}>Recurrent Neural Network (RNN)</option>
+            </select>
+            <button type="submit">Predict & Recommend</button>
+        </form>
+
+        {% if predicted_category %}
+        <div class="results-block">
+            <h2>{{ predicted_category }}</h2>
+        </div>
+        {% endif %}
+
+        {% if recommendations %}
+        <div class="results-block">
+            <h3>Top Recommended Job Categories:</h3>
+            <ul>
+                {% for rec in recommendations %}
+                <li>{{ rec }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
