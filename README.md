@@ -1,30 +1,54 @@
-# Resume-Classification-and-Job-recommendation
-An NLP-powered job recommendation engine that classifies resumes using KNN, Naive Bayes, and RNN models. Deployed as a live web application with Flask on Render, achieving 98.45% accuracy.
+# Project Report: Resume Classification and Job Recommendation System
+
+**Author:** [Your Name]
+
+---
 
 ## 1. Introduction
+
 In the modern job market, recruiters are often inundated with thousands of resumes for a single job opening. Manually sorting through these documents to find qualified candidates for various roles is a time-consuming and inefficient process. This project addresses this challenge by developing an intelligent system that automates the classification of resumes into predefined job categories and provides relevant job recommendations. By leveraging Natural Language Processing (NLP) and machine learning, this system serves as a powerful tool to streamline the initial stages of the recruitment process.
-Project Overview: Resume Classification and Job Recommendation System
 
-This project automates the initial stages of recruitment by classifying resumes into job categories and providing relevant job recommendations.
+---
 
-Key Objectives:
+## 2. Objectives
 
-    Classify Resumes: Use Natural Language Processing (NLP) and machine learning to categorize resumes into one of 25 job roles.
+-   To develop a robust text-cleaning pipeline to preprocess raw resume text data, making it suitable for machine learning analysis.
+-   To build and evaluate multiple machine learning models for classifying resumes into 25 distinct job categories.
+-   To implement a content-based recommendation system that suggests similar job roles based on a candidate's predicted field.
+-   To deploy the final system as an interactive and user-friendly web application using the Flask framework, allowing for real-world use.
 
-    Recommend Jobs: Suggest the top 5 most similar job categories based on the initial classification.
+---
 
-    Deploy as a Web App: Create an interactive web application using Flask for real-world use.
+## 3. Methodology and Implementation
 
-Methodology:
+The project was executed in several distinct phases:
 
-    Preprocessing: Cleaned raw resume text to remove irrelevant data.
+#### a) Data Collection and Preprocessing
+The foundation of this project is the "Resume Dataset," which contains resumes categorized into 25 job roles. A comprehensive text-cleaning function was developed to handle raw text by removing URLs, special characters, and other irrelevant data.
 
-    Model Training: Converted text to numerical vectors using TF-IDF and trained three models: K-Nearest Neighbors, Naive Bayes, and a Recurrent Neural Network (RNN).
+#### b) Feature Engineering
+The cleaned text data was converted into numerical vectors using the **Term Frequency-Inverse Document Frequency (TF-IDF)** technique. This method effectively captures the importance of different words in a resume. For the deep learning model, a `Tokenizer` was used to convert text into integer sequences.
 
-    Recommendation Engine: Built a system using Cosine Similarity to find and rank the most similar job categories.
+#### c) Model Development
+Three different classification models were trained and evaluated to find the best-performing approach:
+1.  **K-Nearest Neighbors (KNC):** A simple, instance-based learning algorithm.
+2.  **Multinomial Naive Bayes (MNB):** A probabilistic classifier well-suited for text classification tasks.
+3.  **Recurrent Neural Network (RNN):** A deep learning model designed to handle sequential data like text, capturing context and word order.
 
-    Deployment: The final model was deployed as a web application on Hugging Face Spaces.
+#### d) Recommendation System
+A content-based recommendation engine was built using **Cosine Similarity**. By calculating the similarity between the average TF-IDF vectors of each job category, the system can identify and recommend the top 5 most similar job roles to a candidate's predicted category.
 
-Conclusion:
+#### e) Web Application and Deployment
+The entire system was encapsulated in a web application built with **Flask**. The user interface, created with HTML and styled with CSS, allows users to paste a resume, select a model, and receive an instant prediction and a list of job recommendations. The final application was deployed on **Hugging Face Spaces** for public access.
 
-This project successfully created an intelligent tool that streamlines the resume screening process, demonstrating the practical application of machine learning in Human Resources.
+---
+
+## 4. Results
+
+All three models demonstrated the ability to classify resumes with a high degree of accuracy. The deployed web application provides a seamless and interactive user experience, successfully integrating the complex backend logic. The recommendation system effectively suggests relevant alternative roles, adding significant value for both job seekers and recruiters.
+
+---
+
+## 5. Conclusion
+
+This project successfully demonstrates the power of NLP and machine learning in solving real-world HR challenges. The developed Resume Classification and Job Recommendation system is a practical, scalable tool that can significantly enhance the efficiency of the recruitment pipeline. Future work could involve expanding the number of job categories, incorporating more advanced deep learning architectures like Transformers, and further refining the recommendation logic.
