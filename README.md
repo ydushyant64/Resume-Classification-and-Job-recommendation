@@ -8,7 +8,7 @@ Ever felt overwhelmed by a mountain of resumes? This project is my answer to tha
 
 Curious to see it in action? You can try out the live application right here:
 
-**[https://huggingface.co/spaces/dushyant64/Resume-Classification-and-Job-recommendation](https://huggingface.co/spaces/dushyant64/Resume-Classification-and-Job-recommendation)**
+**[https://huggingface.co/spaces/ydushyant64/Resume-Classification-and-Job-recommendation](https://huggingface.co/spaces/ydushyant64/Resume-Classification-and-Job-recommendation)**
 
 Here’s a snapshot of what the app looks like:
 
