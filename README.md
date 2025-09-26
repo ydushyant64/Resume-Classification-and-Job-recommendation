@@ -1,6 +1,6 @@
 # Project Report: Resume Classification and Job Recommendation System
 
-**Author:** [Your Name]
+**Author:** [Dushyant Pratap Singh]
 
 ---
 
@@ -43,12 +43,26 @@ The entire system was encapsulated in a web application built with **Flask**. Th
 
 ---
 
-## 4. Results
+## 4. Libraries Used
+
+This project utilizes several key Python libraries:
+
+-   **Flask:** For building and serving the web application.
+-   **Scikit-learn:** For machine learning tasks, including TF-IDF vectorization, K-Nearest Neighbors, Naive Bayes, and Cosine Similarity.
+-   **TensorFlow & Keras:** For building and training the Recurrent Neural Network (RNN) model.
+-   **Pandas:** For data manipulation, loading, and cleaning the resume dataset.
+-   **NumPy:** For efficient numerical operations.
+-   **Gunicorn:** As the production web server for the Flask application.
+-   **Matplotlib & Seaborn:** For data visualization during the exploratory data analysis phase in the Jupyter notebook.
+
+---
+
+## 5. Results
 
 All three models demonstrated the ability to classify resumes with a high degree of accuracy. The deployed web application provides a seamless and interactive user experience, successfully integrating the complex backend logic. The recommendation system effectively suggests relevant alternative roles, adding significant value for both job seekers and recruiters.
 
 ---
 
-## 5. Conclusion
+## 6. Conclusion
 
 This project successfully demonstrates the power of NLP and machine learning in solving real-world HR challenges. The developed Resume Classification and Job Recommendation system is a practical, scalable tool that can significantly enhance the efficiency of the recruitment pipeline. Future work could involve expanding the number of job categories, incorporating more advanced deep learning architectures like Transformers, and further refining the recommendation logic.
