@@ -1,6 +1,6 @@
 # Project Report: Resume Classification and Job Recommendation System
 
-**Author:** [Dushyant Pratap Singh]
+**Author:** [Your Name]
 
 ---
 
@@ -24,7 +24,7 @@ In the modern job market, recruiters are often inundated with thousands of resum
 The project was executed in several distinct phases:
 
 #### a) Data Collection and Preprocessing
-The foundation of this project is the "Resume Dataset," which contains resumes categorized into 25 job roles. A comprehensive text-cleaning function was developed to handle raw text by removing URLs, special characters, and other irrelevant data.
+The foundation of this project is the **"Resume Dataset,"** which contains **962 unique resumes** categorized into 25 job roles. A comprehensive text-cleaning function was developed to handle raw text by removing URLs, special characters, and other irrelevant data.
 
 #### b) Feature Engineering
 The cleaned text data was converted into numerical vectors using the **Term Frequency-Inverse Document Frequency (TF-IDF)** technique. This method effectively captures the importance of different words in a resume. For the deep learning model, a `Tokenizer` was used to convert text into integer sequences.
@@ -39,11 +39,23 @@ Three different classification models were trained and evaluated to find the bes
 A content-based recommendation engine was built using **Cosine Similarity**. By calculating the similarity between the average TF-IDF vectors of each job category, the system can identify and recommend the top 5 most similar job roles to a candidate's predicted category.
 
 #### e) Web Application and Deployment
-The entire system was encapsulated in a web application built with **Flask**. The user interface, created with HTML allows users to paste a resume, select a model, and receive an instant prediction and a list of job recommendations. The final application was deployed on **Hugging Face Spaces** for public access.
+The entire system was encapsulated in a web application built with **Flask**. The user interface, created with HTML and styled with CSS, allows users to paste a resume, select a model, and receive an instant prediction and a list of job recommendations. The final application was deployed on **Hugging Face Spaces** for public access.
 
 ---
 
-## 4. Libraries Used
+## 4. Model Performance
+
+The models were evaluated on a held-out test set, and their accuracy scores are as follows:
+
+| Model | Test Accuracy |
+| :--- | :--- |
+| **K-Nearest Neighbors (KNC)** | 97.41% |
+| **Multinomial Naive Bayes (MNB)** | 98.44% |
+| **Recurrent Neural Network (RNN)**| 98.96% |
+
+---
+
+## 5. Libraries Used
 
 This project utilizes several key Python libraries:
 
@@ -54,12 +66,6 @@ This project utilizes several key Python libraries:
 -   **NumPy:** For efficient numerical operations.
 -   **Gunicorn:** As the production web server for the Flask application.
 -   **Matplotlib & Seaborn:** For data visualization during the exploratory data analysis phase in the Jupyter notebook.
-
----
-
-## 5. Results
-
-All three models demonstrated the ability to classify resumes with a high degree of accuracy. The deployed web application provides a seamless and interactive user experience, successfully integrating the complex backend logic. The recommendation system effectively suggests relevant alternative roles, adding significant value for both job seekers and recruiters.
 
 ---
 
