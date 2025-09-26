@@ -5,11 +5,11 @@
 ## Live Demo
 
 You can test the live application here:
-**[https://huggingface.co/spaces/dushyant64/Resume-Classification-and-Job-recommendation](https://huggingface.co/spaces/ydushyant64/Resume-Classification-and-Job-recommendation)**
+**[https://huggingface.co/spaces/ydushyant64/Resume-Classification-and-Job-recommendation](https://huggingface.co/spaces/ydushyant64/Resume-Classification-and-Job-recommendation)**
 
 ![Application Screenshot](screenshot.PNG)
 
-*(Note: To display the image, please upload a screenshot of your webpage to your repository and name it `screenshot.PNG`)*
+
 ---
 
 ## 1. Introduction
