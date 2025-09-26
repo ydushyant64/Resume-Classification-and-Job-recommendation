@@ -1,6 +1,6 @@
 # Project Report: Resume Classification and Job Recommendation System
 
-**Author:** [Your Name]
+**Author:** [Dushyant Pratap Singh]
 
 ---
 
@@ -49,9 +49,9 @@ The models were evaluated on a held-out test set, and their accuracy scores are 
 
 | Model | Test Accuracy |
 | :--- | :--- |
-| **K-Nearest Neighbors (KNC)** | 97.41% |
-| **Multinomial Naive Bayes (MNB)** | 98.44% |
-| **Recurrent Neural Network (RNN)**| 98.96% |
+| **K-Nearest Neighbors (KNC)** | 98.44% |
+| **Multinomial Naive Bayes (MNB)** | 93.78% |
+| **Recurrent Neural Network (RNN)**| 98.45% |
 
 ---
 
